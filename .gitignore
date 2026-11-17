@@ -1,0 +1,12 @@
+# Track only the config. Everything else Zed keeps in this folder stays local.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/sync.ps1
+!/settings.json
+!/keymap.json
+!/tasks.json
+!/debug.json
+!/themes/
+!/snippets/

@@ -1,0 +1,10 @@
+// Zed key bindings
+[
+  {
+    // Quick fixes / code actions (like Alt+Enter in JetBrains)
+    "context": "Editor",
+    "bindings": {
+      "alt-enter": "editor::ToggleCodeActions"
+    }
+  }
+]

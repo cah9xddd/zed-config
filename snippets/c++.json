@@ -1,0 +1,237 @@
+{
+  "Cout to console": {
+    "prefix": "cout",
+    "body": [
+      "std::cout << std::format(\"$1 {}\", $2) << std::endl;",
+      "$0"
+    ],
+    "description": "Output to console with std::cout"
+  },
+  "Cin from console": {
+    "prefix": "cin",
+    "body": [
+      "std::cin >> $1;",
+      "$0"
+    ],
+    "description": "Input from console with std::cin"
+  },
+  "Endl to a console": {
+    "prefix": "endl",
+    "body": [
+      "std::cout << std::endl;",
+      "$0"
+    ],
+    "description": "Writes endl line"
+  },
+  "Println to console": {
+    "prefix": "println",
+    "body": [
+      "std::println(\"${1:text} {}\", $2);",
+      "$0"
+    ],
+    "description": "Print a formatted line with std::println (C++23, #include <print>)"
+  },
+  "Print to console": {
+    "prefix": "print",
+    "body": [
+      "std::print(\"${1:text} {}\", $2);",
+      "$0"
+    ],
+    "description": "Print formatted text without a newline with std::print (C++23, #include <print>)"
+  },
+  "C++ Header File": {
+    "prefix": "header",
+    "body": [
+      "#pragma once",
+      "",
+      "$0",
+      "namespace $2 {",
+      "struct ${1:ClassName} {",
+      "    explicit $1();",
+      "    virtual ~$1();",
+      "",
+      "private:",
+      "    ",
+      "};",
+      "",
+      "}",
+      ""
+    ],
+    "description": "Create a C++ header file with header guards and a basic class structure using the filename"
+  },
+  "C++ Cpp File": {
+    "prefix": "cpp",
+    "body": [
+      "#include \"$1\"",
+      "",
+      "namespace $0{",
+      "}",
+      ""
+    ],
+    "description": "Create a C++ cpp file"
+  },
+  "TODO": {
+    "prefix": "todo",
+    "body": [
+      "// TODO $1",
+      "$0"
+    ],
+    "description": "Simple TODO"
+  },
+  "Static Cast": {
+    "prefix": "sc",
+    "body": [
+      "static_cast<${1|int16_t,uint16_t,int32_t,uint32_t,uint64_t,int64_t,size_t,float,double,char|}>(${2:expr})$3",
+      "$0"
+    ],
+    "description": "Insert a static_cast with a selected type and an expression"
+  },
+  "Vector": {
+    "prefix": "vec",
+    "body": "std::vector<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:vec};",
+    "description": "Vector snippet"
+  },
+  "Array": {
+    "prefix": "array",
+    "body": "std::array<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|},$2> ${3:vec};",
+    "description": "Array snippet"
+  },
+  "Queue": {
+    "prefix": "queue",
+    "body": "std::queue<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:q};",
+    "description": "Queue snippet"
+  },
+  "Stack": {
+    "prefix": "stack",
+    "body": "std::stack<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:stk};",
+    "description": "Stack snippet"
+  },
+  "List": {
+    "prefix": "list",
+    "body": "std::list<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:list};",
+    "description": "List snippet"
+  },
+  "Forward_List": {
+    "prefix": "forward_list",
+    "body": "std::forward_list<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:flist};",
+    "description": "Forward List snippet"
+  },
+  "Set": {
+    "prefix": "set",
+    "body": "std::set<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:set};",
+    "description": "Set snippet"
+  },
+  "Unordered_Set": {
+    "prefix": "unordered_set",
+    "body": "std::unordered_set<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:uset};",
+    "description": "Unordered Set snippet"
+  },
+  "Map": {
+    "prefix": "map",
+    "body": "std::map<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}, ${2|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,float,double,char,std::string|}> ${3:map};",
+    "description": "Map snippet"
+  },
+  "Unordered_Map": {
+    "prefix": "unordered_map",
+    "body": "std::unordered_map<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}, ${2|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,float,double,char,std::string|}> ${3:umap};",
+    "description": "Unordered Map snippet"
+  },
+  "Shared_Ptr": {
+    "prefix": "shared_ptr",
+    "body": "std::shared_ptr<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:ptr} = std::make_shared<${1}>($3);",
+    "description": "Declare a std::shared_ptr and initialize it"
+  },
+  "Auto_Shared_Ptr": {
+    "prefix": "shared_ptr_auto",
+    "body": "auto ${1:ptr} = std::make_shared<${2|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}>($3);",
+    "description": "Declare an auto std::shared_ptr and initialize it"
+  },
+  "Unique_Ptr": {
+    "prefix": "unique_ptr",
+    "body": "std::unique_ptr<${1|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}> ${2:ptr} = std::make_unique<${1}>($3);",
+    "description": "Declare a std::unique_ptr and initialize it"
+  },
+  "Auto_Unique_Ptr": {
+    "prefix": "unique_ptr_auto",
+    "body": "auto ${1:ptr} = std::make_unique<${2|int16_t,uint16_t,int32_t,uint32_t,int64_t,uint64_t,size_t,float,double,char,std::string|}>($3);",
+    "description": "Declare an auto std::unique_ptr and initialize it"
+  },
+  "Lambda": {
+    "prefix": "lambda",
+    "body": [
+      "[$1]($2) -> ${3:void} {",
+      "$4",
+      "}$0"
+    ],
+    "description": "Create a lambda function"
+  },
+  "Include Header Global": {
+    "prefix": "include_global",
+    "body": [
+      "#include <$1>",
+      "$0"
+    ],
+    "description": "Insert a #include directive"
+  },
+  "Include Header Project": {
+    "prefix": "include",
+    "body": [
+      "#include \"$1\"",
+      "$0"
+    ],
+    "description": "Insert a #include directive for project headers"
+  },
+  "Enum Class": {
+    "prefix": "enum_class",
+    "body": [
+      "enum class ${1:EnumName} {",
+      "\t${2:Value1},",
+      "\t${3:Value2},",
+      "\t${4:COUNT}",
+      "};"
+    ],
+    "description": "C++ enum class"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "    explicit $1(${2});",
+      "    ~$1();",
+      "",
+      "private:",
+      "    $0",
+      "};"
+    ],
+    "description": "Class with constructor, destructor and a private section"
+  },
+  "Class Rule of Five": {
+    "prefix": "class5",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "    explicit $1(${2});",
+      "    ~$1();",
+      "",
+      "    $1(const $1&)            = ${3|default,delete|};",
+      "    $1& operator= (const $1&) = $3;",
+      "    $1($1&&) noexcept            = ${4|default,delete|};",
+      "    $1& operator= ($1&&) noexcept = $4;",
+      "",
+      "private:",
+      "    $0",
+      "};"
+    ],
+    "description": "Class with explicit copy/move constructors and assignments (rule of five)"
+  },
+  "Struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:StructName} {",
+      "    $0",
+      "};"
+    ],
+    "description": "Plain struct"
+  }
+}

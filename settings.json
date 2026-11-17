@@ -1,0 +1,190 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "existing_window",
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "autosave": "on_focus_change",
+  "debugger": {
+    "dock": "left"
+  },
+  "agent": {
+    "button": true,
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left",
+    "button": true
+  },
+  "terminal": {
+    "flexible": false,
+    "show_count_badge": true,
+    "dock": "bottom"
+  },
+  "project_panel": {
+    "hide_hidden": false,
+    "hide_root": false,
+    "sticky_scroll": true,
+    "git_status_indicator": true,
+    "diagnostic_badges": true,
+    "show_diagnostics": "all",
+    "scrollbar": {
+      "show": "auto"
+    },
+    "bold_folder_labels": true,
+    "starts_open": true,
+    "auto_reveal_entries": true,
+    "indent_size": 20.0,
+    "git_status": true,
+    "folder_indicator": "both",
+    "file_icons": true,
+    "entry_spacing": "comfortable",
+    "hide_gitignore": false,
+    "default_width": 240.0,
+    "dock": "right"
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": false,
+      "delay_ms": 0,
+      "padding": 8,
+      "location": "inline"
+    }
+  },
+  "proxy": "",
+  "use_smartcase_search": false,
+  "languages": {
+    "C++": {
+      "hard_tabs": false
+    }
+  },
+  // MSVC standard headers have no extension (<vector>, <concepts>...) -> treat as C++
+  "file_types": {
+    "C++": ["**/MSVC/*/include/**"]
+  },
+  "diagnostics": {
+    "inline": {
+      "padding": 2,
+      "update_debounce_ms": 1500,
+      "max_severity": "error",
+      "enabled": true
+    }
+  },
+  "prettier": {
+    "allowed": false
+  },
+  "document_symbols": "off",
+  "document_folding_ranges": "off",
+  "semantic_tokens": "combined",
+  "go_to_definition_scroll_strategy": "center",
+  "completions": {
+    "lsp_insert_mode": "replace_suffix"
+  },
+  "markdown_preview": {
+    "open_markdown_files_in_preview": true,
+    "max_width": 800.0
+  },
+  "colorize_brackets": true,
+  "lsp_document_colors": "inlay",
+  "code_lens": "on",
+  "inlay_hints": {
+    "show_other_hints": false,
+    "show_parameter_hints": true,
+    "show_type_hints": false,
+    "show_value_hints": false,
+    "enabled": true,
+    "show_background": false
+  },
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "line_width": 1,
+    "enabled": true
+  },
+  "preferred_line_length": 90,
+  "minimap": {
+    "show": "never"
+  },
+  "relative_line_numbers": "disabled",
+  "gutter": {
+    "git_gutter_width": {
+      "custom": 2.0
+    },
+    "runnables": true,
+    "line_numbers": true
+  },
+  "hover_popover_delay": 300,
+  "hover_popover_enabled": true,
+  "show_signature_help_after_edits": true,
+  "auto_signature_help": true,
+  "sticky_scroll": {
+    "enabled": false
+  },
+  "autoscroll_on_clicks": true,
+  "mouse_wheel_zoom": false,
+  "which_key": {
+    "enabled": true
+  },
+  "cursor_shape": "bar",
+  "cursor_animation": {
+    "enabled": true
+  },
+  "text_rendering_mode": "platform_default",
+  "ui_font_weight": 400.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 500.0,
+  "buffer_font_family": "MartianMono Nerd Font",
+  "disable_ai": true,
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "icon_theme": "VSCode Icons for Zed (Dark Official Icons)",
+  // extensions Zed installs automatically on a fresh machine
+  "auto_install_extensions": {
+    "git-firefly": true,
+    "glsl": true,
+    "html": true,
+    "lua": true,
+    "neocmake": true,
+    "proto": true,
+    "tokyo-night": true,
+    "toml": true,
+    "vscode-dark-modern": true,
+    "vscode-icons": true,
+    "xml": true
+  },
+  "ui_font_size": 15.0,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Ember Dark v3",
+  },
+  // clangd: const parameters / const fields get their own style names (colors live in the Ember theme)
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      { "token_type": "parameter", "token_modifiers": ["readonly"], "style": ["variable.parameter.constant"] },
+      { "token_type": "property", "token_modifiers": ["readonly"], "style": ["property.constant"] }
+    ]
+  }
+}
