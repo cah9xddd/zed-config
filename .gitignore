@@ -3,7 +3,7 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
-!/sync.ps1
+!/sync.sh
 !/settings.json
 !/keymap.json
 !/tasks.json
